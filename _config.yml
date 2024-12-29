@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Minngki.dev # blog_name will be displayed in your blog page
-blog_description: 백엔드 개발자 김민지 입니다.
+blog_name: Blog # blog_name will be displayed in your blog page
+blog_description: Documenting my growth as a developer and a thinker.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
