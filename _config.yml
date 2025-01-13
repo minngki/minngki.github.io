@@ -266,7 +266,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["CS", "Python", "NodeJS", "Java", "Database"] # these tags will be displayed on the front page of your blog
+display_tags: ["CS", "Python", "NodeJS", "Java", "Database", "Retrospective"] # these tags will be displayed on the front page of your blog
 display_categories: ["on-the-job", "writing"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
