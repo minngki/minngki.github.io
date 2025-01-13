@@ -4,18 +4,33 @@
 
 // Typography
 
-p,
+p {
+  color: var(--global-text-color);
+  font-weight: 300;
+  opacity: 1.5;
+}
+
+em,
+div,
+li,
+span {
+  color: var(--global-text-color);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-em,
-div,
-li,
-span,
+h6{
+  margin-top: 2.0rem;
+  margin-bottom: 1.0rem;
+  font-weight: 350;
+  color: var(--global-text-color);
+}
+
 strong {
+  font-weight: 450;
   color: var(--global-text-color);
 }
 
