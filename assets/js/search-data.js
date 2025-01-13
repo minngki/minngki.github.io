@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-꾸준히-하자-블로그",
+        },{id: "post-mongodb는-왜-query-가-아니라-pipeline-이라고-표현할까",
+      
+        title: "MongoDB는 왜 ‘query’가 아니라 ‘pipeline’이라고 표현할까?",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/mongodb-pipeline/";
+        
+      },
+    },{id: "post-꾸준히-하자-블로그",
       
         title: "꾸준히 하자, 블로그..!",
       
