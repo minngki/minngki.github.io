@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-mongodb는-왜-query-가-아니라-pipeline-이라고-표현할까",
+        },{id: "post-mongodb-aggregation-pipeline-내부-동작-원리와-최적화",
+      
+        title: "MongoDB Aggregation Pipeline 내부 동작 원리와 최적화",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/mongodb-aggregation/";
+        
+      },
+    },{id: "post-mongodb는-왜-query-가-아니라-pipeline-이라고-표현할까",
       
         title: "MongoDB는 왜 ‘query’가 아니라 ‘pipeline’이라고 표현할까?",
       
