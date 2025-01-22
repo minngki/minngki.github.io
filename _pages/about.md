@@ -2,15 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: Excited to learn and improve every day.
+subtitle: <strong>Excited to learn and improve every day.</strong>
 
 profile:
   align: right
   image: prof-minji.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: False # crops the image to make it circular
   more_info: >
-    <p>Backend Developer</p><br>
-    <p>💼 Office: <a href="http://www.aijinet.com/theme/aijinet/company/company.php">Aijinet</a></p>
+    <p align="right">Backend Developer</p><br>
+    <p>💼 Office: <a href="http://www.aijinet.com/theme/aijinet/company/company.php">Aijinet</a></p><br>
+    <p>📞 Phone: 010-8863-6370</p>
+    
     
 
 news: True # includes a list of news items
@@ -24,4 +26,4 @@ social: True # includes social icons at the bottom of the page
 
 특히 금융 데이터에 관심이 많아, 관련 서비스 개발 경험을 쌓아가며 문제 해결의 성취감을 즐기고 있습니다. 사용자에게 가치를 전달하는 코드를 작성하는 것을 가장 중요한 목표로 삼고 있습니다.
 
-현재 Aijinet에서 백엔드 개발자로 일하며 보험 서비스 개발을 경험하고 있으며, 이 블로그를 통해 배운 점과 경험을 공유하고, 같은 관심사를 가진 분들과 소통하고자 합니다.
+현재 [Aijinet]("http://www.aijinet.com/theme/aijinet/company/company.php")에서 백엔드 개발자로 일하며 보험 서비스 개발을 경험하고 있으며, 이 블로그를 통해 배운 점과 경험을 공유하고, 같은 관심사를 가진 분들과 소통하고자 합니다.

@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Minji Kim",
+    "label": "Backend Developer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "minngkii@gmail.com",
+    "phone": "010-8863-6370",
+    "url": "https://github.com/minngki",
+    "summary": "I have focused on performance optimization and automation through service development, and database design. Now, I aim to deepen my understanding of system architecture through research and contribute to high-efficiency system design.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -16,21 +16,44 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
+        "network": "Linkedin",
+        "username": "Minji Kim",
         "url": "https://twitter.com/AlbertEinstein"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Aijinet",
+      "position": "Engine Backend Developer",
+      "location": "Seoul, South Korea",
+      "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
+      "startDate": "2022-03-30",
+      "endDate": "",
+      "summary": "Specialized in developing and optimizing insurance data pipelines and recommendation systems, improving operational efficiency and user experience. Skilled in backend API development, query optimization, and system migration for innovative insurance solutions.",
+      "highlights": ["API development","data pipelines","operational efficiency","query optimization"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Sejong University",
+      "location": "Seoul, South Korea",
+      "url": "https://en.sejong.ac.kr/eng/index.do",
+      "area": "Business Administration",
+      "studyType": "bachelor",
+      "startDate": "2017-02-20",
+      "endDate": "2022-02-20",
+      "score": "Total GPA of 3.84 / 4.5\nMajor GPA of 3.94 / 4.5",
+      "courses": ["Businiss Analytics", "Statistics"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Nobel Prize in Physics",
+      "date": "1921-11-01",
+      "awarder": "Royal Swedish Academy of Sciences",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
     }
   ],
   "volunteer": [
@@ -43,28 +66,6 @@
       "endDate": "2015-07-01",
       "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
       "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
     }
   ],
   "certificates": [
