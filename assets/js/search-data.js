@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -50,17 +50,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/mongodb-pipeline/";
-        
-      },
-    },{id: "post-꾸준히-하자-블로그",
-      
-        title: "꾸준히 하자, 블로그..!",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2024/first/";
         
       },
     },{id: "news-a-simple-inline-announcement",
