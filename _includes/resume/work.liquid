@@ -4,19 +4,39 @@
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
-          {% if content.startDate %}
-            {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
-            {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
-            {% assign date = startDate | append: ' - ' %}
-            {% assign date = date | append: endDate %}
-          {% else %}
-            {% assign date = '' %}
-          {% endif %}
+            {% if content.startDate %}
+                {% assign start_year = content.startDate | split: '-' | first | plus: 0 %}
+                {% assign start_month = content.startDate | split: '-' | slice: 1, 1 | first | plus: 0 %}
+                {% if content.endDate %}
+                    {% assign end_year = content.endDate | split: '-' | first | plus: 0 %}
+                    {% assign end_month = content.endDate | split: '-' | slice: 1, 1 | first | plus: 0 %}
+                {% else %}
+                    {% assign end_year = site.time | date: "%Y" | plus: 0 %}
+                    {% assign end_month = site.time | date: "%m" | plus: 0 %}
+                {% endif %}
+
+                {% assign year_diff = end_year | minus: start_year %}
+                {% assign month_diff = end_month | minus: start_month %}
+                {% if month_diff < 0 %}
+                    {% assign year_diff = year_diff | minus: 1 %}
+                    {% assign month_diff = month_diff | plus: 12 %}
+                {% endif %}
+
+                {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+                {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+                {% assign date = startDate | append: ' - ' | append: endDate %}
+
+
+            {% endif %}
           <table class="table-cv">
             <tbody>
               <tr>
                 <td>
                   <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+                    {% if year_diff > 0 or month_diff > 0 %}
+                        <span class="badge badge-custom font-weight-bold danger-color-dark" style="min-width: 75px">
+                            {{ year_diff }}년 {{ month_diff }}개월</span>
+                    {% endif %}
                 </td>
               </tr>
               {% if content.location %}

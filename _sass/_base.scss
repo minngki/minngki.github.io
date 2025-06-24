@@ -536,6 +536,11 @@ footer.sticky-bottom {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
       }
+
+      .badge-custom {
+        color: var(--global-card-bg-color) !important;
+        background-color:  #B0C4DE !important;
+      }
     }
   }
 }
@@ -1084,7 +1089,7 @@ nav[data-toggle="toc"] {
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 0.75rem;
+    font-size: 1.0rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1095,7 +1100,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     &:hover {
       color: var(--global-hover-color);
