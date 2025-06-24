@@ -524,6 +524,12 @@ footer.sticky-bottom {
 .cv {
   margin-bottom: 40px;
 
+  .period {
+    font-size: 0.9rem;
+    padding: 0.0rem;
+    margin-bottom: 0.5rem;
+  }
+
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
@@ -543,6 +549,40 @@ footer.sticky-bottom {
       }
     }
   }
+}
+
+.cv {
+  h1,
+  h2,
+  h3,
+  h4,
+  h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 350;
+    color: var(--global-text-color);
+  }
+
+  h5 {
+    margin-top: 0.0001rem;
+  }
+
+  ul {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.cv.period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cv.period h6,
+.cv.period .badge,
+.cv.period .location {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .table-cv-map {
@@ -1089,7 +1129,7 @@ nav[data-toggle="toc"] {
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1100,7 +1140,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     &:hover {
       color: var(--global-hover-color);

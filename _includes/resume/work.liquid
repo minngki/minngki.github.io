@@ -2,8 +2,8 @@
     {% assign work = data[1] | sort: 'startDate' | reverse %}
     {% for content in work %}
         <li class="list-group-item">
-            <div class="row">
-                <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+            <div class="row d-flex flex-column flex-md-row">
+                <div class="cv period col-md-2 mb-2 mb-md-0">
                     {% if content.startDate %}
                         {% assign start_year = content.startDate | split: '-' | first | plus: 0 %}
                         {% assign start_month = content.startDate | split: '-' | slice: 1, 1 | first | plus: 0 %}
@@ -25,41 +25,26 @@
                         {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
                         {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
                         {% assign date = startDate | append: ' - ' | append: endDate %}
-
-
                     {% endif %}
-                    <table class="table-cv">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                                      style="min-width: 75px"> {{ date }} </span>
-                                {% if year_diff > 0 or month_diff > 0 %}
-                                    <span class="badge badge-custom font-weight-bold danger-color-dark"
-                                          style="min-width: 75px">
+                        <h6> {{ date }} </h6>
+                        {% if year_diff > 0 or month_diff > 0 %}
+                            <span class="badge badge-custom font-weight-bold danger-color-dark"
+                                  style="min-width: 75px">
                             {{ year_diff }}년 {{ month_diff }}개월</span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        {% if content.location %}
-                            <tr>
-                                <td>
-                                    <p class="location">
-                                        <i class="fa-solid fa-location-dot iconlocation"></i>
-                                        {{ content.location }}
-                                    </p>
-                                </td>
-                            </tr>
                         {% endif %}
-                        </tbody>
-                    </table>
+                        {% if content.location %}
+                            <p class="location">
+                                <i class="fa-solid fa-location-dot iconlocation"></i>
+                                {{ content.location }}
+                            </p>
+                        {% endif %}
                 </div>
-                <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-                    <h5 class="title font-weight-bold ml-1 ml-md-1" style="margin-top: 0.0001rem;">
+                <div class="col-md-10 mt-2 mt-md-0">
+                    <h6 class="title font-weight-bold ">
                         <a href="{{ content.url }}">{{ content.position }}</a>
-                    </h5>
-                    <h6 class="ml-1 ml-md-1" style="font-size: 0.95rem">{{ content.name }}</h6>
-                    <h6 class="ml-1 ml-md-1" style="font-size: 0.95rem">{{ content.summary }}</h6>
+                    </h6>
+                    <h6 class="" style="font-size: 0.95rem">{{ content.name }}</h6>
+                    <h6 class="" style="font-size: 0.95rem">{{ content.summary }}</h6>
                     <ul class="items">
                         {% for item in content.highlights %}
                             <li>
