@@ -4,10 +4,11 @@
 
 // Typography
 
-p {
+p,
+li {
   color: var(--global-text-color);
-  //font-weight:350;
-  //opacity: 1;
+  font-weight:350;
+  opacity: 0.85;
 }
 
 em,
@@ -25,12 +26,12 @@ h5,
 h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 350;
+  font-weight: 650;
   color: var(--global-text-color);
 }
 
 strong {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--global-text-color);
 }
 
@@ -43,10 +44,11 @@ table {
   th {
     font-size: 1rem;
     padding: 1px 1rem 1px 0;
+    font-weight:350;
   }
 
   th {
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -223,11 +225,11 @@ ul.task-list input[type="checkbox"] {
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -559,8 +561,8 @@ footer.sticky-bottom {
   h6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-weight: 350;
     color: var(--global-text-color);
+    font-weight: 400;
   }
 
   h5 {
@@ -570,6 +572,7 @@ footer.sticky-bottom {
   ul {
     margin-bottom: 0.5rem;
   }
+
 }
 
 .cv.period {
@@ -670,6 +673,7 @@ footer.sticky-bottom {
     a {
       color: var(--global-text-color);
       text-decoration: none;
+      font-weight: 500;
 
       &:hover {
         color: var(--global-theme-color);

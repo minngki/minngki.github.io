@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "name": "김민지 Minji Kim",
+    "label": "Backend Developer / Data Engineer",
+    "image": "https://github.com/minngki/minngki.github.io/blob/main/assets/img/prof-minji.jpg",
+    "email": "minngkii@gmail.com",
+    "phone": "010-8863-6370",
+    "url": "https://github.com/minngki",
+    "introduce": "데이터 파이프라인 구축과 백엔드 개발을 중심으로 다양한 실무 경험을 쌓아왔습니다. Python, Airflow, GCS, PostgreSQL, MySQL, MSSQL 등을 활용하여 대규모 데이터를 안정적으로 처리하고 전송하는 시스템을 설계하고 운영해왔습니다. 특히, 성능과 신뢰성이 중요한 보험 마이데이터 기반의 추천 엔진 개발 및 보험 약관 자동화 수집 시스템을 직접 구현하며 확장성과 유지보수성을 고려한 아키텍처 설계에 대한 고민을 이어가고 있습니다.<br><br>분산 처리와 장애 감지, 예외 상황에서도 견고하게 동작하는 자동화 구조 설계에 관심이 많으며, 신뢰성 있는 데이터를 정확한 시점에 안정적으로 전달하는 것에 높은 책임감을 가지고 있습니다.<br>Java 기반 어드민 페이지 개발, Express 및 Next.js 기반 엔진 API 서버 구축까지 다양한 기술을 프로젝트 환경에 맞게 적용하며 현실적인 문제 해결 중심의 개발 경험을 넓혀가고 있습니다.<br><br>기술과 서비스에 대한 깊은 이해를 바탕으로, 앞으로도 더 나은 시스템을 설계하고 구현하며, 데이터 흐름을 책임지는 개발자로 성장하고자 합니다. 꾸준한 학습과 경험을 통해 기술적 깊이를 더해가며, 장기적으로는 지속가능하고 신뢰받는 기술 문화를 만들어가는 개발자가 되는 것을 목표로 하고 있습니다.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -16,8 +16,8 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
+        "network": "Linkedin",
+        "username": "Minji Kim",
         "url": "https://twitter.com/AlbertEinstein"
       }
     ]
@@ -25,45 +25,30 @@
   "work": [
     {
       "name": "Aijinet",
-      "position": "Engine Backend Developer",
+      "position": "R&D Center Backend Chapter / Backend Developer",
       "location": "Seoul, South Korea",
       "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
-      "startDate": "2022-03-30",
-      "summary": "Specialized in developing and optimizing insurance data pipelines and recommendation systems, improving operational efficiency and user experience. Skilled in backend API development, query optimization, and system migration for innovative insurance solutions.",
-      "highlights": ["API development","data pipelines","operational efficiency","query optimization"]
-    },
-    {
-      "name": "Aijinet 레쯔고",
-      "position": "Engine Backend Developer",
-      "location": "Seoul, South Korea",
-      "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
-      "startDate": "2022-03-30",
-      "summary": "Specialized in developing and optimizing insurance data pipelines and recommendation systems, improving operational efficiency and user experience. Skilled in backend API development, query optimization, and system migration for innovative insurance solutions.",
-      "highlights": ["API development","data pipelines","operational efficiency","query optimization"]
+      "startDate": "2022-02",
+      "highlights": [
+        "Airflow 기반 병렬 처리 및 자동화 시스템 구축",
+        "대용량 데이터 적재 안정성 및 효율성 개선",
+        "보험 약관 및 보험료 데이터 크롤링 ETL 파이프라인 재구축·운영",
+        "SaaS 기반 보험 진단·추천 엔진의 백엔드 서비스 설계·개발",
+        "Spring Security 기반 어드민 API 개발"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "Sejong University",
+      "institution": "세종대학교",
       "location": "Seoul, South Korea",
       "url": "https://en.sejong.ac.kr/eng/index.do",
-      "area": "Business Administration",
+      "area": "경영학과 | Business Analytics 융합연계전공",
       "studyType": "bachelor",
       "startDate": "2017-02-20",
       "endDate": "2022-02-20",
-      "score": "Total GPA of 3.84 / 4.5\nMajor GPA of 3.94 / 4.5",
-      "courses": ["Businiss Analytics", "Statistics"]
-    },
-    {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "score": "<br>",
+      "courses": ["Total GPA of 3.84 / 4.5, Major GPA of 3.94 / 4.5"]
     }
   ],
   "awards": [
