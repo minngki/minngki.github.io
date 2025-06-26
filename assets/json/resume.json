@@ -38,93 +38,97 @@
       ]
     }
   ],
-  "education": [
+  "projects": [
     {
-      "institution": "세종대학교",
-      "location": "Seoul, South Korea",
-      "url": "https://en.sejong.ac.kr/eng/index.do",
-      "area": "경영학과 | Business Analytics 융합연계전공",
-      "studyType": "bachelor",
-      "startDate": "2017-02-20",
-      "endDate": "2022-02-20",
-      "score": "<br>",
-      "courses": ["Total GPA of 3.84 / 4.5, Major GPA of 3.94 / 4.5"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "name": "Amplitude 사용자 정보 일괄 처리 시스템 개발",
+      "summary": "기존 고객에 대한 Amplitude User Properties를 자동화된 방식으로 일괄 업데이트",
+      "highlights": [
+        "Airflow 기반 병렬 처리 ETL 파이프라인 설계 및 GCS 연동 구조 개발",
+        "expand 기반 병렬 처리 시스템 신규 구축 및 최적화로 6만 건 데이터 처리 시간 84% 개선",
+        "Exponential backoff 로직 도입하여 운영 안정성 확보",
+        "Task-GCS 간 매핑 구조 설계를 통해 에러 추적 가능성을 높이고 운영 효율성 강화"
+      ],
+      "startDate": "2025-06-01"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "name": "전사 KPI 대시보드 데이터 적재 자동화",
+      "summary": "전사 KPI 리포트 작성을 위한 일별 누적 데이터 ETL 파이프라인 설계 및 구축",
+      "highlights": [
+        "Airflow DAG 설계 및 Google API 연동을 포함한 자동화 파이프라인 구현",
+        "공휴일 Task branch를 통해 DAG 실행 흐름을 제어하고 리소스 낭비 최소화",
+        "통합 트랜잭션 기반 적재로 데이터 정합성 확보",
+        "Slack API 연동으로 배치 실패 실시간 모니터링"
+      ],
+      "startDate": "2025-05-01"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "name": "보험료 기반 추천 데이터 자동화 시스템 구축",
+      "summary": "보험료 기반 추천 점수 생성을 위한 대용량 데이터 자동 수집 및 배포 체계 구축",
+      "highlights": [
+        "ETL 파이프라인 자동화 DAG 설계 및 GCS 메타데이터 연동 설계",
+        "약 150만 건 데이터 5분 이내 적재",
+        "엔진 빌드 시 GCS에서 최신 메타데이터를 자동 참조하여 배포 효율화"
+      ],
+      "startDate": "2025-03-01",
+      "endDate": "2025-04-01"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
+      "name": "어드민 페이지 보안 강화 시스템 개발",
+      "summary": "금융감독원 보안 가이드 대응을 위한 인증 및 계정 보안 고도화",
+      "highlights": [
+        "Spring Security 기반 마이페이지 API 설계 및 보안 기능 개발",
+        "비밀번호 인증 및 변경 로직 구현으로 정책 구현",
+        "단위 테스트 커버리지 90% 이상 확보"
+      ],
+      "startDate": "2025-02-01"
     },
     {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
+      "name": "통계 데이터 생성을 위한 배치 시스템 구축",
+      "summary": "엔진 메타데이터 및 통계 데이터를 위한 자동 추출 및 최신화 체계 구축",
+      "highlights": [
+        "통계 처리용 전용 스키마 설계 및 배치 자동화",
+        "기존 스키마 기반 인덱스 재설계",
+        "데이터 추출 속도 약 90% 개선",
+        "수동 작업을 주 단위 자동화하여 최신성 향상"
+      ],
+      "startDate": "2025-01-01",
+      "endDate": "2025-02-01"
     },
     {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "보험 약관 크롤링 시스템 재구축",
+      "summary": "반복적인 수동 크롤링 작업을 자동화하고 데이터 정합성을 높이기 위한 재구축",
+      "highlights": [
+        "전체 ETL 파이프라인 재설계 및 오류 복구 가능한 구조 구현",
+        "월간 오류 발생률 142건에서 15건으로 89% 감소",
+        "Exponential backoff 로직 도입하여 운영 안정성 확보",
+        "전체 처리 기간 7일에서 3일 단축",
+        "업데이트 주기를 분기에서 주 단위 전환으로 91% 운영 효율성 향상"
+      ],
+      "startDate": "2024-04-01",
+      "endDate": "2024-12-01"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "앱 백엔드 서버 마이그레이션 지원",
+      "summary": "유지보수성과 일관성을 위한 PHP 에서 Java 기반 엔진 API 마이그레이션",
+      "highlights": [
+        "엔진 백엔드 서버 마이그레이션",
+        "중복 로직 제거 및 JPA Repository 기반 쿼리 정리를 통해 공통 모듈화 수행",
+        "유사 API 개발 시 모듈 및 쿼리 재사용으로 개발 소요 시간 5일 → 3일 단축 (약 40% 감소)"
+      ],
+      "startDate": "2024-08-01",
+      "endDate": "2024-09-01"
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "간편보험료 기반 보험 상품 비교 시스템 개발",
+      "summary": "보험설계사들의 수기 설계안 작성을 자동화하는 보험 비교 엔진 구축",
+      "highlights": [
+        "보험료 계산 API, 데이터 제어 API 설계 및 최적화",
+        "보험설계사들의 보험 설계안 비교 시간 80% 단축",
+        "보험 계약 전환율 4% 상승",
+        "쿼리 최적화 및 검증 API 도입으로 응답 속도 90% 개선"
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01"
     }
   ],
   "skills": [
@@ -142,52 +146,96 @@
       ]
     }
   ],
-  "languages": [
+  "education": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "institution": "세종대학교",
+      "location": "Seoul, South Korea",
+      "url": "https://en.sejong.ac.kr/eng/index.do",
+      "area": "경영학과 | Business Analytics 융합연계전공",
+      "studyType": "bachelor",
+      "startDate": "2017-02-20",
+      "endDate": "2022-02-20",
+      "score": "<br>",
+      "courses": ["Total GPA of 3.84 / 4.5", "Major GPA of 3.94 / 4.5"]
     }
   ],
+  "awards": [
+    {
+      "title": "지역 데이터를 활용한 데이터 분석 및 시각화 “광진구 시장 활성화 프로젝트”",
+      "date": "2021-12",
+      "awarder": "세종대학교/서울특별시",
+      "url": "https://drive.google.com/file/d/1ePgSdRrNP8nd-heTAzub0KQjIWC2m1E5/view?usp=drive_link",
+      "summary": "대학총장상"
+    },
+    {
+      "title": "대학 팀프로젝트 경진대회, “삼성전자 주식 예측 보고서”",
+      "date": "2020-02",
+      "awarder": "세종대학교",
+      "summary": "최우수상"
+    },
+    {
+      "title": "대학생 영화 수요 예측 경진대회, \"개봉 전후 영화 흥행 예측 분석을 통한 의사결정\"",
+      "date": "2020-01",
+      "awarder": "소니전자",
+      "url": "https://drive.google.com/file/d/1mVLBb2eWx6r0slbvuZ-ikAf8Ae9BgvZm/view?usp=drive_link",
+      "summary": "장려상"
+    },
+    {
+      "title": "전국 대학생∙일반인 고조선 독서논술대회",
+      "date": "2019-10",
+      "awarder": "겨레얼살리기국민운동본부",
+      "summary": "2위 은상"
+    },
+    {
+      "title": "교내 독서경시대회 \"사소한 것들\"",
+      "date": "2018-10",
+      "awarder": "세종대학교",
+      "summary": "3위"
+    },
+    {
+      "title": "전국 대학생∙일반인 고조선 독서논술대회",
+      "date": "2018-10",
+      "awarder": "겨레얼살리기국민운동본부",
+      "summary": "장려상"
+    },
+    {
+      "title": "신입생 입시 합격수기 공모전",
+      "date": "2017-04",
+      "awarder": "세종대학교",
+      "url": "https://drive.google.com/file/d/1tdLUQZ6TRYJXERUoOyf5v7EMObKUVF34/view?usp=drive_link",
+      "summary": "최우수상"
+    }
+  ],
+
+  "certificates": [
+    {
+      "name": "정보처리기사",
+      "date": "2024-06",
+      "issuer": "한국산업인력공단",
+      "icon": "fa-solid fa-clipboard-check"
+    },
+    {
+      "name": "TEPS",
+      "date": "2024-09",
+      "issuer": "서울대학교발전재단",
+      "icon": "fa-solid fa-tag"
+    }
+  ],
+  "languages": [],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Sports",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Pilates",
+        "Golf",
+        "Weight Training",
+        "Running"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+  "references": [],
+  "volunteer": [],
+  "meta": {},
+  "publications": []
 }
