@@ -543,6 +543,7 @@ footer.sticky-bottom {
       .badge {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
+        font-size: 0.9rem;
       }
 
       .badge-custom {
@@ -557,16 +558,16 @@ footer.sticky-bottom {
   h1,
   h2,
   h3,
-  h4,
+  h5,
   h6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: var(--global-text-color);
     font-weight: 400;
   }
-
-  h5 {
+  h4 {
     margin-top: 0.0001rem;
+    font-weight: 400;
   }
 
   ul {
@@ -581,7 +582,7 @@ footer.sticky-bottom {
   align-items: flex-start;
 }
 
-.cv.period h6,
+.cv.period h4,
 .cv.period .badge,
 .cv.period .location {
   display: block;

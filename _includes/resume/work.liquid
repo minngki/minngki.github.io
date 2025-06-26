@@ -3,7 +3,7 @@
     {% for content in work %}
         <li class="list-group-item">
             <div class="row d-flex flex-column flex-md-row">
-                <div class="cv period col-md-2 mb-2 mb-md-0">
+                <div class="cv period col-md-3 mb-3 mb-md-0">
                     {% if content.startDate %}
                         {% assign start_year = content.startDate | split: '-' | first | plus: 0 %}
                         {% assign start_month = content.startDate | split: '-' | slice: 1, 1 | first | plus: 0 %}
@@ -26,7 +26,7 @@
                         {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
                         {% assign date = startDate | append: ' - ' | append: endDate %}
                     {% endif %}
-                        <h6> {{ date }} </h6>
+                        <h4 style="color: #696969"> {{ date }} </h4>
                         {% if year_diff > 0 or month_diff > 0 %}
                             <span class="badge badge-custom font-weight-bold danger-color-dark"
                                   style="min-width: 75px">
@@ -39,11 +39,11 @@
                             </p>
                         {% endif %}
                 </div>
-                <div class="col-md-10 mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold " style="font-size: 1.2rem">
+                <div class="col-md-9 mt-2 mt-md-0">
+                    <h4 class="title font-weight-bold">
                         <a href="{{ content.url }}">{{ content.name }}</a>
-                    </h6>
-                    <h6 class="" style="font-size: 0.95rem">{{ content.position }}</h6>
+                    </h4>
+                    <h5 style="font-size: 1.1rem">{{ content.position }}</h5>
                     {% comment %}<h6 class="" style="font-size: 0.95rem">{{ content.summary }}</h6>{% endcomment %}
                     <ul class="items">
                         {% for item in content.highlights %}
