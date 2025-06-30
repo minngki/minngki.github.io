@@ -8,11 +8,11 @@
     "url": "https://github.com/minngki",
     "introduce": "데이터 파이프라인 구축과 백엔드 개발을 중심으로 다양한 실무 경험을 쌓아왔습니다. Python, Airflow, GCS, PostgreSQL, MySQL, MSSQL 등을 활용하여 대규모 데이터를 안정적으로 처리하고 전송하는 시스템을 설계하고 운영해왔습니다. 특히, 성능과 신뢰성이 중요한 보험 마이데이터 기반의 추천 엔진 개발 및 보험 약관 자동화 수집 시스템을 직접 구현하며 확장성과 유지보수성을 고려한 아키텍처 설계에 대한 고민을 이어가고 있습니다.<br><br>분산 처리와 장애 감지, 예외 상황에서도 견고하게 동작하는 자동화 구조 설계에 관심이 많으며, 신뢰성 있는 데이터를 정확한 시점에 안정적으로 전달하는 것에 높은 책임감을 가지고 있습니다.<br>Java 기반 어드민 페이지 개발, Express 및 Next.js 기반 엔진 API 서버 구축까지 다양한 기술을 프로젝트 환경에 맞게 적용하며 현실적인 문제 해결 중심의 개발 경험을 넓혀가고 있습니다.<br><br>기술과 서비스에 대한 깊은 이해를 바탕으로, 앞으로도 더 나은 시스템을 설계하고 구현하며, 데이터 흐름을 책임지는 개발자로 성장하고자 합니다. 꾸준한 학습과 경험을 통해 기술적 깊이를 더해가며, 장기적으로는 지속가능하고 신뢰받는 기술 문화를 만들어가는 개발자가 되는 것을 목표로 하고 있습니다.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "Songpa-gu",
+      "countryCode": "South Korea",
+      "region": "Seoul"
     },
     "profiles": [
       {

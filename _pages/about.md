@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p align="right">Backend Developer</p><br>
     <p>💼 Office: <a href="http://www.aijinet.com/theme/aijinet/company/company.php">Aijinet</a></p><br>
-    <p>📞 Phone: 010-8863-6370</p>
+    <p>📞 Phone: -</p>
     
     
 
