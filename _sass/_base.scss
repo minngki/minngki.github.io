@@ -543,12 +543,13 @@ footer.sticky-bottom {
       .badge {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
-        font-size: 0.9rem;
+        font-weight: lighter;
       }
 
       .badge-custom {
         color: var(--global-card-bg-color) !important;
         background-color:  #B0C4DE !important;
+        font-size: 0.8rem;
       }
     }
   }
@@ -572,6 +573,10 @@ footer.sticky-bottom {
 
   ul {
     margin-bottom: 0.5rem;
+  }
+
+  li {
+    list-style-type: disc !important;
   }
 
 }

@@ -27,6 +27,14 @@
                                 <span class="item">{{ item }}</span>
                             </li>
                         {% endfor %}
+                        <div>
+                            {% if content.skillKeywords %}
+                                <li style="font-weight: 400">Skill Keywords: </li>
+                                {% for item in content.skillKeywords %}
+                                    <span class="badge mr-1">{{ item }}</span>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </ul>
                 </div>
             </div>
