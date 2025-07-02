@@ -296,20 +296,25 @@
       "date": "2021-12",
       "awarder": "세종대학교/서울특별시",
       "url": "https://drive.google.com/file/d/1ePgSdRrNP8nd-heTAzub0KQjIWC2m1E5/view?usp=drive_link",
-      "summary": "대학총장상"
+      "summary": "대학총장상",
+      "skillKeywords": ["Tableau","Python","Geopandas"],
+      "subTitle": "Tableau Dashboard",
+      "subUrl": "https://public.tableau.com/app/profile/iris.kim2553/vizzes"
     },
     {
       "title": "대학 팀프로젝트 경진대회, “삼성전자 주식 예측 보고서”",
       "date": "2020-02",
       "awarder": "세종대학교",
-      "summary": "최우수상"
+      "summary": "최우수상",
+      "skillKeywords": ["Python", "scikit-learn"]
     },
     {
       "title": "대학생 영화 수요 예측 경진대회, \"개봉 전후 영화 흥행 예측 분석을 통한 의사결정\"",
       "date": "2020-01",
       "awarder": "소니전자",
       "url": "https://drive.google.com/file/d/1mVLBb2eWx6r0slbvuZ-ikAf8Ae9BgvZm/view?usp=drive_link",
-      "summary": "장려상"
+      "summary": "장려상",
+      "skillKeywords": ["Tableau","Python","scikit-learn"]
     },
     {
       "title": "전국 대학생∙일반인 고조선 독서논술대회",
