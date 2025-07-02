@@ -25,7 +25,7 @@ social: True # includes social icons at the bottom of the page
 
 안녕하세요!
 
-저는 최근 Python, Airflow, GCS, PostgreSQL, MySQL, MSSQL 등을 활용하여
+저는 최근 Python, Airflow, GCS, RDB 등을 활용하여
 데이터 파이프라인을 설계하고 구축해 온 백엔드 개발자 입니다.
 
 항상 고민합니다. **“어떻게 하면 대규모 데이터를 정확한 시간에, 더 빠르고 안정적으로 전송할 수 있을까? 🤔”**

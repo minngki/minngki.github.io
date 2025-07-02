@@ -28,7 +28,7 @@
       "position": "R&D Center Backend Chapter / Backend Developer",
       "location": "Seoul, South Korea",
       "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
-      "startDate": "2022-02",
+      "startDate": "2021-08",
       "highlights": [
         "Airflow 기반 병렬 처리 및 자동화 시스템 구축",
         "대용량 데이터 적재 안정성 및 효율성 개선",
@@ -39,6 +39,22 @@
     }
   ],
   "projects": [
+    {
+      "name": "B2B SaaS 보장분석 서비스 개발",
+      "summary": "RabbitMQ 기반 메시징 처리 및 html 바인딩 ",
+      "highlights": [
+        "expand 기반 병렬 처리 시스템 신규 구축 및 최적화로 6만 건 데이터 처리 시간 84% 개선",
+        "Task-GCS 간 매핑 구조 설계를 통해 에러 추적 가능성을 높이고 운영 효율성 강화",
+        "Amplitude API 연동 요청시 Exponential backoff 로직 도입하여 운영 안정성 확보"
+      ],
+      "startDate": "2025-06-01",
+      "skillKeywords": [
+        "Python",
+        "Airflow",
+        "Amplitude API",
+        "Slack API"
+      ]
+    },
     {
       "name": "Amplitude 사용자 정보 일괄 처리 시스템 개발",
       "summary": "Airflow 기반 병렬 처리 ETL 파이프라인 설계 및 GCS 연동 구조 개발",
@@ -329,7 +345,7 @@
       "icon": "fa-solid fa-clipboard-check"
     },
     {
-      "name": "TEPS",
+      "name": "TEPS 358점",
       "date": "2024-09",
       "issuer": "서울대학교발전재단",
       "icon": "fa-solid fa-tag"
