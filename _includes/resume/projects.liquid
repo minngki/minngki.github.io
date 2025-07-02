@@ -14,13 +14,13 @@
                     {% else %}
                         {% assign date = 'Present' %}
                     {% endif %}
-                    <h5 style="color: #696969"> {{ date }} </h5>
+                    <h5> {{ date }} </h5>
                 </div>
                 <div class="col-md-9 mt-2 mt-md-0">
                     <h5 class="title font-weight-bold ">
                         {{ content.name }}
                     </h5>
-                    <h6 class="" style="font-style: italic; color: #696969">{{ content.summary }}</h6>
+                    <h6 class="" style="font-style: italic">{{ content.summary }}</h6>
                     <ul class="items">
                         {% for item in content.highlights %}
                             <li>

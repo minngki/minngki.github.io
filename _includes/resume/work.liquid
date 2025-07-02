@@ -26,7 +26,7 @@
                         {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
                         {% assign date = startDate | append: ' - ' | append: endDate %}
                     {% endif %}
-                        <h4 style="color: #696969"> {{ date }} </h4>
+                        <h4> {{ date }} </h4>
                         {% if year_diff > 0 or month_diff > 0 %}
                             <span class="badge badge-custom font-weight-bold danger-color-dark"
                                   style="min-width: 75px">

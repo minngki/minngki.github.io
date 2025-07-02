@@ -590,8 +590,8 @@ footer.sticky-bottom {
 .cv.period h4,
 .cv.period .badge,
 .cv.period .location {
-  display: block;
-  margin-bottom: 0.5rem;
+  display: block !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .table-cv-map {
