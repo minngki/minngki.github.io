@@ -57,9 +57,9 @@
       "name": "B2B SaaS 보장분석 서비스 개발",
       "summary": "RabbitMQ 기반 메시징 처리 및 Thymeleaf 기반 html 바인딩 ",
       "highlights": [
-        "RabbitMQ 기반 메세지 발행, DLQ 구성, Queue 서버 동적 생성 및 수신 처리 API 개발",
-        "Spring Boot 환경에서 Consumer 장애 대응 및 재처리를 위한 Dead Letter Queue 처리 로직 구현",
-        "Thymeleaf 기반 정적 HTML 템플릿 구성 및 보장분석 결과 데이터를 바인딩하여 B2B API 응답 최적화"
+        "요구사항 기반 RabbitMQ 기반 메시지 큐 서버 구성 및 DLQ(Dead Letter Queue) 설계로 장애 상황에 대한 복원력 확보",
+        "Spring Boot 기반 RabbitMQ Producer/Consumer API 구현 및 Queue 상태 실시간 모니터링 처리",
+        "Thymeleaf 템플릿 엔진을 활용한 보험 보장 분석 결과 HTML 템플릿 바인딩 및 정적 페이지 구성 자동화"
       ],
       "startDate": "2025-07-01",
       "skillKeywords": [
