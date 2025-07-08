@@ -55,18 +55,39 @@
   "projects": [
     {
       "name": "B2B SaaS 보장분석 서비스 개발",
-      "summary": "abbitMQ 기반 메시지 처리 및 보장 리포트 템플릿 자동화",
+      "summary": "RabbitMQ 기반 메시지 처리 및 보장 리포트 템플릿 자동화",
       "highlights": [
         "요구사항 기반 DLQ 를 포함한 메시지 큐 서버 구성 및 장애 대응 구조 설계",
         "Spring Boot 기반 Producer/Consumer API 개발 및 큐 상태 실시간 모니터링 처리",
-        "Thymeleaf 템플릿 엔진 기반 보장 분석 리포트 HTML 바인딩 및 정적 페이지 생성"
+        "Thymeleaf 템플릿 엔진 기반 보장 분석 리포트 HTML 바인딩 및 정적 페이지 생성",
+        "정적 HTML 페이지 생성 후 S3 업로드 자동화"
       ],
       "startDate": "2025-07-01",
       "skillKeywords": [
         "Java",
         "Spring Boot",
         "RabbitMQ",
-        "Thymeleaf"
+        "Thymeleaf",
+        "S3"
+      ]
+    },
+    {
+      "name": "B2B 통계 메타데이터 자동화 시스템 구축",
+      "summary": "Airflow 기반 대규모 보험업권 마이데이터 중심의 통계치 추출 자동화",
+      "highlights": [
+        "최대 1,900만 건 보험 데이터를 벡터화 연산 기반으로 처리하기 위해 Pandas 최적화 적용, 처리 속도 개선",
+        "Pandera 기반 스키마 검증 로직을 도입하여 데이터 유입 시 타입 안정성과 유효성 보장",
+        "고객사 분기별 통계 리포트 추출 작업을 자동화하여 수작업 제거 및 운영 안정성 확보"
+      ],
+      "startDate": "2025-06-01",
+      "skillKeywords": [
+        "Python",
+        "Pandas",
+        "Pandera",
+        "Airflow",
+        "GCS",
+        "Amplitude API",
+        "Slack API"
       ]
     },
     {
@@ -74,13 +95,16 @@
       "summary": "Airflow 기반 병렬 처리 ETL 파이프라인 설계 및 GCS 연동 구조 개발",
       "highlights": [
         "expand 기반 병렬 처리 시스템 신규 구축 및 최적화로 6만 건 데이터 처리 시간 84% 개선",
-        "Task-GCS 간 매핑 구조 설계를 통해 에러 추적 가능성을 높이고 운영 효율성 강화",
-        "Amplitude API 연동 요청시 Exponential backoff 로직 도입하여 운영 안정성 확보"
+        "Task와 GCS 간 매핑 구조를 설계하여 에러 발생 시 추적 가능성 향상 및 운영 효율 증대",
+        "Pydantic 기반 입력 데이터 검증 로직을 통해 타입 안정성과 유효성 보장",
+        "Amplitude API 호출 시 Exponential Backoff 로직 적용으로 장애 대응력 및 재시도 안정성 확보"
       ],
       "startDate": "2025-06-01",
       "skillKeywords": [
         "Python",
+        "Pydantic",
         "Airflow",
+        "GCS",
         "Amplitude API",
         "Slack API"
       ]
@@ -131,14 +155,15 @@
       "highlights": [
         "Spring Security 기반 마이페이지 API 설계 개발",
         "비밀번호 인증 및 변경 로직 구현으로 보안 정책 구현",
-        "단위 테스트 커버리지 90% 이상 확보"
+        "JUnit 기반 단위 테스트 커버리지 96% 달성 및 API 명세 자동화(Redoc 기반) 적용"
       ],
       "startDate": "2025-02-01",
       "skillKeywords": [
         "Java",
         "Spring Boot",
-        "MySQL",
-        "Spring Security"
+        "Spring Security",
+        "JUnit",
+        "MySQL"
       ]
     },
     {
@@ -166,7 +191,7 @@
         "월간 오류 발생률 142건에서 15건으로 89% 감소",
         "Exponential backoff 기반 요청 재시도 체계 강화로 운영 안정성 확보",
         "전체 처리 기간 7일에서 3일로 단축하여 수집 주기 개선",
-        "약관 업데이트 주기를 분기에서 주 단위로 전환하여 운영 효율성 91% 향상"
+        "분기 단위의 약관 업데이트를 주 단위로 Cron 스케줄링하여 운영 효율성을 91% 향상"
       ],
       "startDate": "2024-04-01",
       "endDate": "2024-12-01",
