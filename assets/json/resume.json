@@ -155,7 +155,8 @@
       "highlights": [
         "Spring Security 기반 마이페이지 API 설계 개발",
         "비밀번호 인증 및 변경 로직 구현으로 보안 정책 구현",
-        "JUnit 기반 단위 테스트 커버리지 96% 달성 및 API 명세 자동화(Redoc 기반) 적용"
+        "JUnit 기반 단위 테스트 커버리지 96% 달성",
+        "Redoc을 활용한 API 문서 자동화 적용"
       ],
       "startDate": "2025-02-01",
       "skillKeywords": [
@@ -310,14 +311,15 @@
       "name": "Tools & IDEs",
       "icon": "fa-solid fa-screwdriver-wrench",
       "keywords": [
+        "Mermaid",
         "Bash, Zsh",
         "Git",
         "Gitlab",
         "Github",
-        "IDEA / PyCharm / DataSpell / Datagrip / Webstorm",
         "Jira",
         "Confluence",
-        "Notion"
+        "Notion",
+        "IDEA / PyCharm / DataSpell / Datagrip / Webstorm"
       ]
     }
   ],
