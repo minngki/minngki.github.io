@@ -33,9 +33,9 @@
       "highlights": [
         "Airflow 및 GCP 기반의 병렬 처리·스케줄링 시스템 설계 및 운영 자동화",
         "보험 약관·보험료 등 정형·비정형 데이터를 대상으로 한 ETL 파이프라인 재구축 및 운영",
-        "Bodoc 앱 보험 진단·추천 기능을 위한 엔진 로직 설계 및 Express.js(TS) 기반 API 서버 개발",
+        "Spring Boot 기반의 보험사 대상 B2B API 개발 및 운영 고도화 및 Bodoc 어드민 페이지 개발",
         "PostgreSQL, Nest.js 기반 SaaS 아키텍처 도입 및 대용량 보험료 데이터 처리 개발",
-        "Spring Boot 기반의 Bodoc 어드민 페이지 및 보험사 대상 B2B API 개발 및 운영 고도화"
+        "Bodoc 앱 보험 진단·추천 기능을 위한 엔진 로직 설계 및 Express.js(TS) 기반 API 서버 개발"
       ]
     },
     {
