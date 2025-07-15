@@ -68,8 +68,7 @@
         "Spring Boot",
         "RabbitMQ",
         "Thymeleaf",
-        "S3",
-        "CloudFront"
+        "S3"
       ]
     },
     {
