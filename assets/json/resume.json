@@ -210,7 +210,7 @@
       "summary": "유지보수성과 구조적 일관성을 위한 백엔드 API 마이그레이션 수행",
       "highlights": [
         "Laravel → Spring Boot 기반 특정 백엔드 API를 마이그레이션하여 시스템 일관성 기여",
-        "복잡한 보험 도메인 구조를 sealed interface permits 기반으로 정의하여 인터페이스 재사용률 향상 및 설계 일관성 확보",
+        "복잡한 보험 도메인 구조를 sealed interface permits 기반으로 정의하여 인터페이스 재사용률 향상",
         "중복 로직 제거 및 JPA Repository 기반 쿼리 구조 개선을 통해 공통 모듈화 진행",
         "인터페이스 및 쿼리 재사용을 통해 유사 API 개발 소요 시간 5일 → 3일로 단축 (약 40% 감소)"
       ],
