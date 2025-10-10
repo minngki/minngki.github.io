@@ -31,12 +31,12 @@
       "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
       "startDate": "2022-02",
       "highlights": [
-        "Spring Boot 기반 마이데이터 숨은 보험금 찾기 API 개발",
-        "Spring Boot 기반 보험사 대상 B2B API 개발 및 앱 어드민 페이지 개발",
+        "Spring Boot 기반 마이데이터 보험업권 관련 API 개발 및 어드민 페이지 개발",
         "Airflow 및 GCP 기반의 병렬 처리·스케줄링 시스템 설계 및 운영 자동화",
         "보험 약관·보험료 등 정형·비정형 데이터를 대상으로 한 ETL 파이프라인 재구축 및 운영",
-        "PostgreSQL, Nest.js 기반 SaaS 아키텍처 도입 및 대용량 보험료 데이터 처리 개발",
-        "Bodoc 앱 보험 진단·추천 기능을 위한 엔진 로직 설계 및 Express.js(TS) 기반 API 서버 개발"
+        "Bodoc 앱의 보험 진단·추천 기능을 위한 엔진 로직 설계 및 Express.js 기반 API 서버 개발",
+        "PostgreSQL, Nest.js 기반 SaaS 아키텍처 도입 및 보험료 계산 API 개발",
+        "Spring Boot 기반 B2B 보장분석 리포트 페이지 개발"
       ]
     },
     {
@@ -55,14 +55,34 @@
   ],
   "projects": [
     {
+      "name": "마이데이터 보험업권 통계치 추출 자동화 시스템 고도화",
+      "summary": "고객사 신규 요청사항에 따른 로직 변경 및 최대 4,500만 건 데이터 처리 성능 고도화",
+      "highlights": [
+        "추출 조건 변경으로 인한 데이터 처리 병목을 해결하기 위해 Airflow DAG 구조 전면 재설계",
+        "Polars 및 Parquet 도입하여 연산 효율과 I/O 성능 개선, 처리 속도 약 50% 단축",
+        "청크 단위의 분산 저장·로딩하는 구조로 변경하여 메모리 부하 해소 및 파이프라인 안정성 확보",
+        "Pandera 기반 스키마 검증 로직을 도입하여 데이터 유입 시 타입 안정성과 유효성 보장",
+        "B2B 고객사별 통계치 추출 작업을 자동화하여 수작업 제거 및 운영 안정성 확보"
+      ],
+      "startDate": "2025-09-01",
+      "skillKeywords": [
+        "Python",
+        "Polars",
+        "Pandera",
+        "Airflow",
+        "GCS",
+        "Slack API"
+      ]
+    },
+    {
       "name": "마이데이터 숨은 보험금 찾기",
       "summary": "마이데이터 연동 시 숨은 보험금 찾기 신규 기능 추가",
       "highlights": [
-        "Spring Boot 기반 마이데이터 연동 API 구현 (숨은 보험금 목록, 연동 결과 조회 등)",
+        "Spring Boot 기반 숨은 보험금 조회 API 구현 (숨은 보험금 목록, 연동 결과 조회 등)",
         "기획·프론트엔드 팀과의 협업을 통해 숨은 보험금 조회 플로우 및 화면 노출 조건 정의",
-        "보험사 응답 성공/실패, 금액 유무 등 다양한 노출 케이스 정리 및 응답 포맷 설계"
+        "마이데이터 연동 여부, 숨은 보험금 유무 케이스 기반의 응답 포맷 설계"
       ],
-      "startDate": "2025-07-01",
+      "startDate": "2025-08-01",
       "skillKeywords": [
         "Java",
         "Spring Boot"
@@ -72,36 +92,18 @@
       "name": "B2B SaaS 보장분석 서비스 개발",
       "summary": "RabbitMQ 기반 메시지 처리 및 보장 리포트 템플릿 자동화",
       "highlights": [
-        "Spring Boot Thymeleaf 템플릿 엔진 기반 보장 분석 리포트 HTML 바인딩",
+        "판매채널에 따른 Thymeleaf 템플릿 엔진 기반 보장 분석 리포트 HTML 바인딩",
         "정적 HTML 페이지 생성 후 S3 업로드 자동화",
         "요구사항 기반 DLQ 를 포함한 메시지 큐 서버 구성 및 장애 대응 구조 설계 기여"
       ],
       "startDate": "2025-07-01",
+      "endDate": "2025-09-01",
       "skillKeywords": [
         "Java",
         "Spring Boot",
-        "RabbitMQ",
         "Thymeleaf",
-        "S3"
-      ]
-    },
-    {
-      "name": "B2B 통계 메타데이터 자동화 시스템 구축",
-      "summary": "Airflow 기반 최대 1,900만 건 보험업권 마이데이터 중심의 통계치 추출 자동화",
-      "highlights": [
-        "보험 데이터 처리를 위해 벡터화 연산 기반 Pandas 최적화 적용하여 처리 속도 개선",
-        "Pandera 기반 스키마 검증 로직을 도입하여 데이터 유입 시 타입 안정성과 유효성 보장",
-        "고객사 분기별 통계 리포트 추출 작업을 자동화하여 수작업 제거 및 운영 안정성 확보"
-      ],
-      "startDate": "2025-06-01",
-      "skillKeywords": [
-        "Python",
-        "Pandas",
-        "Pandera",
-        "Airflow",
-        "GCS",
-        "Amplitude API",
-        "Slack API"
+        "S3",
+        "RabbitMQ"
       ]
     },
     {
