@@ -3,7 +3,7 @@ layout: post
 title: MongoDB는 왜 ‘query’가 아니라 ‘pipeline’이라고 표현할까?
 date: 2025-01-13 4:20
 description:
-tags: database
+tags: database nosql
 categories: study
 ---
 

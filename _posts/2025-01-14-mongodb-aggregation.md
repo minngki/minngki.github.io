@@ -3,7 +3,7 @@ layout: post
 title: MongoDB Aggregation Pipeline 내부 동작 원리와 최적화
 date: 2025-01-14 22:20
 description:
-tags: database
+tags: database nosql
 categories: study
 ---
 
