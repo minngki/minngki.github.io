@@ -1,38 +1,39 @@
-<ul class="card-text  list-group list-group-flush">
+<ul class="card-text list-group list-group-flush">
     {% for content in data[1] %}
-    <li class="list-group-item">
-        <div class="row">
-            <div class="cv period col-md-3 mb-3 mb-md-0">
-                {% if content.date %} {% assign date = content.date | split: '-' | join: '.' %} {% else %} {% assign date = '' %} {% endif %}
-                <h6> {{ date }} </h6>
-            </div>
-            <div class="col-md-9 mt-2 mt-md-0">
-                <h6 class="title font-weight-bold ml-1 ml-md-4" style="color: var(--global-theme-color)">
-                    {% if content.url %}
-                        🔗 <a href="{{ content.url }}">{{ content.title }}</a>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="cv period col-md-3 mb-3 mb-md-0">
+                    {% if content.date %}
+                        {% assign date = content.date | split: '-' | join: '.' %}
                     {% else %}
-                        {{ content.title }}
+                        {% assign date = '' %}
                     {% endif %}
-                </h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.awarder }}</h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{ content.summary }}</h6>
-                {% if content.skillKeywords %}
-                    <div class="ml-1 ml-md-4 mb-1 mt-1" style="font-size:0.9rem">Skill Keywords:
-                        {% for item in content.skillKeywords %}
-                            <span class="badge mr-1">{{ item }}</span>
-                        {% endfor %}
-                        {% if content.subUrl %}
-                            <span class="ml-1 ml-md-4" style="font-style: italic">
-                            🔗 <a href="{{ content.subUrl }}"> {{ content.subTitle }}</a>
-                        </span>
+                    <h6> {{ date }} </h6>
+                </div>
+                <div class="col-md-9 mt-2 mt-md-0">
+                    <h6 class="title font-weight-bold ml-1 ml-md-4" style="color: var(--global-theme-color)">
+                        {% if content.url %}
+                            🔗 <a href="{{ content.url }}">{{ content.title }}</a>
+                        {% else %}
+                            {{ content.title }}
                         {% endif %}
-                    </div>
-                {% endif %}
-
-
+                    </h6>
+                    <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.awarder }}</h6>
+                    <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{ content.summary }}</h6>
+                    {% if content.skillKeywords %}
+                        <div class="ml-1 ml-md-4 mb-1 mt-1" style="font-size:0.9rem">Skill Keywords:
+                            {% for item in content.skillKeywords %}
+                                <span class="badge mr-1">{{ item }}</span>
+                            {% endfor %}
+                            {% if content.subUrl %}
+                                <span class="ml-1 ml-md-4" style="font-style: italic">
+                                🔗 <a href="{{ content.subUrl }}"> {{ content.subTitle }}</a>
+                            </span>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
-
-        </div>
-        {% endfor %}
-    </li>
+        </li>
+    {% endfor %}
 </ul>
