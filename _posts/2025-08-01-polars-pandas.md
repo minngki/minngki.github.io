@@ -18,8 +18,8 @@ Killed (-9)
 처음에는 단순한 일시적 장애로 여겼지만, 수차례 재실행 후에도 동일 현상이 발생했다.  
 서버 로그와 시스템 모니터링 결과를 분석한 끝에, 메모리 초과(OOM, Out of Memory) 로 인한 프로세스 강제 종료임을 확인했다.
 
-요구사항이 변경되어 설계 당시 예상했던 데이터 양보다 기하급수적으로 늘어나, 해당 Task는 약 1.7~2.0GB 수준의 데이터를 한 번에 적재하고 있었다.  
-이는 Airflow worker 프로세스의 heap 한계를 초과하는 수준이었다.
+요구사항이 변경되어 설계 당시 예상했던 데이터 양보다 수십 배로 증가하며, Airflow worker의 메모리 한계를 초과했다.  
+이는 처리 구조 자체가 증가된 데이터 패턴을 감당하지 못한 구조적 문제였다.
 
 ---
 
@@ -36,8 +36,9 @@ Killed (-9)
 
 
 ### 2️⃣ CSV 기반 I/O 구조와 Pandas의 한계
-- CSV는 전체 파일을 통째로 로드해야 하므로 I/O 비용과 CPU 부하가 모두 높았다.
-  - 따라서, Task 간 데이터를 GCS에 CSV로 데이터를 전달하는 방식은 비효율적이었다.
+- CSV는 텍스트 기반 포맷으로, 한 컬럼만 사용하더라도 전체 파일을 디스크에서 모두 읽어야 한다.
+  - 즉, row-based I/O 구조 특성상 병렬 읽기와 column-level 접근이 어렵다.
+  - 따라서, Task 간 데이터를 GCS로 전달할 때마다 전체를 반복적으로 읽는 구조가 되어 I/O 병목과 CPU 오버헤드가 동시에 발생할 수 있었다.
 - pandas의 벡터화 연산을 전면 사용하려 했지만, `apply()` 같은 함수는 벡터화 연산으로 대체할 수 있는 기능이 없어, 연산 효율도 저조했다.
 
 
@@ -105,7 +106,8 @@ Hot spot을 피하지 못하는 상황이었기 때문에 데이터를 누적하
 따라서, 데이터 규모에 따라 ID 범위 기반 chunk size를 달리 조회하도록 Task를 분리했다.
 
 구조를 먼저 변경한 다음, 핵심적인 변경 사항은 streaming 방식이었다.  
-데이터를 추출하는 과정에서 **각 배치를 바로 Parquet 파일로 직렬화해 디스크에 기록함으로써 메모리 누적 없이 streaming 형태로 데이터가 흘러가도록 개선했다.**
+데이터를 추출하는 과정에서 **각 배치를 Parquet 포맷으로 직렬화(메모리 객체 → 파일 바이트 변환) 하여 디스크에 flush하도록 설계했다.**  
+이렇게 하면 메모리에 전체 데이터를 누적하지 않고, **‘읽기 → 변환 → 저장’ 단위로 순환하는 streaming 파이프라인이 되어 OOM을 차단할 수 있다.**
 
 ```python
 def extract_table_to_local_partitioned(self, customer_range: tuple, table_name: str, chunk_size: int):
@@ -132,7 +134,13 @@ def extract_table_to_local_partitioned(self, customer_range: tuple, table_name: 
 ```
 
 이 과정에서 실패할 확률은 거의 낮지만, Airflow의 리트라이 및 병렬 실행 기능을 최대한 활용할 수 있는 이점도 얻었다.
-![DAG Graph](./images/ishot_2025-08-01.png)
+
+<p align="center">
+  <img src="/assets/posts/post_2025-08-01.png"
+       alt="DAG Graph"
+       style="max-width:80%; height:auto; border-radius:8px;">
+</p>
+
 
 사실 Raw Data를 잘 추출하더라도 통계 연산을 하는 곳에서는 소규모-대규모 데이터를 JOIN해서 연산처리 해야했기 때문에 데이터 처리 방식에 대해 많이 고민했던 것 같다.
 
@@ -142,8 +150,8 @@ def extract_table_to_local_partitioned(self, customer_range: tuple, table_name: 
 
 MySQL Hook 내부를 수정해 `fetchall()` → `fetchmany(batch_size=2_000)` 기반으로 변경했다. 
 
-이를 통해 데이터는 한 번에 전부 적재되지 않고, 스트리밍 형태로 순차 읽기가 가능해졌다. 
-Task별 메모리 사용량은 약 2.0GB → 700MB 수준으로 감소했다.
+이를 통해 데이터는 fetch_size 단위(batch) 로만 메모리에 존재하게 되었고, 한 번의 배치가 끝나면 즉시 다음으로 넘어가는 순차 스트리밍 처리 구조가 완성되었다.
+결과적으로 Task별 메모리 피크치는 약 2.0GB → 700MB로 줄었다.
 
 ##### as-is
 ```python
@@ -207,10 +215,11 @@ def extract_and_preprocess_example(customer_id_range: tuple, ti: TaskInstance):
         shutil.rmtree(local_dir, ignore_errors=True)
 ```
 
-## 검증: 수치로 증명하기
+---
 
-성능 개선을 ‘느낌’이 아니라 데이터로 검증했다.
-Airflow 로그와 시스템 모니터링 툴(psutil, htop)을 이용해 메모리와 실행 시간을 측정했다.
+## 검증: 정량적 기준으로 증명하기
+
+Airflow task 로그에서 peak RSS 값을 수집하고, psutil 기반 메모리 프로파일링으로 실행 중 heap 점유량을 직접 측정했다.
 
 | 항목         | 변경 전                | 변경 후    |
 |------------|---------------------|---------|
@@ -234,8 +243,8 @@ Airflow 로그와 시스템 모니터링 툴(psutil, htop)을 이용해 메모�
 
 ## 회고
 
-이번 경험을 통해 느낀 점은, 성능 문제는 단순한 코드 최적화보다 구조적 설계의 문제인 경우가 많다는 것이다.
-‘더 가벼운 데이터 프레임’이 아닌, 더 적합한 처리 구조로 바꿔야 했다.
+이번 경험을 통해 느낀 점은, 성능 문제의 본질은 코드 수준이 아니라 설계 수준에 있다는 것이다.
+“더 가벼운 라이브러리”가 아니라, 데이터의 흐름과 자원 제약에 맞는 구조적 설계가 중요하다.
 
 기술은 문제를 해결하기 위한 수단일 뿐이다.
 핵심은 문제를 얼마나 명확히 정의하고, 시스템 전체를 고려해 구조적으로 접근하느냐에 달려 있다 느꼈다.
