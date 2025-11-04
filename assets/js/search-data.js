@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-mongodb-aggregation-pipeline-내부-동작-원리와-최적화",
+        },{id: "post-pandas에서-polars로-메모리-부하-문제를-근본적으로-해결한-사례",
+      
+        title: "Pandas에서 Polars로 - 메모리 부하 문제를 근본적으로 해결한 사례",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/polars-pandas/";
+        
+      },
+    },{id: "post-mongodb-aggregation-pipeline-내부-동작-원리와-최적화",
       
         title: "MongoDB Aggregation Pipeline 내부 동작 원리와 최적화",
       
