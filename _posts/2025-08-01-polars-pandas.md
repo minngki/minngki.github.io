@@ -34,7 +34,42 @@ Killed (-9)
 - 대량 데이터 구간(hot spot)에서 OOM이 가속화되었으며, chunk 단위 조회를 하더라도 pandas 내부에서 누적되어 해제되지 않았다.
   - _초기엔 데이터 조회 결과가 적은 경우만 조회할 것으로 판단하고 더 빠른(빠르다고 판단한) fetchall 관련 로직만 사용했었다._
 
+아래는 문제가 되었던 Task의 Sequence Diagram 이다.
 
+```mermaid
+sequenceDiagram
+    participant dag as Airflow DAG
+    participant task as Task
+    participant db as DB
+    participant gcs as GCS
+    participant slack as Slack
+ 
+    dag->>task: Run extract_and_preprocess()
+ 
+    task->>db: 고객 범위 조회
+    db-->>task: Return 범위 정보
+ 
+    task->>db: 마이데이터 코드 정보 조회
+    db-->>task: Return 범위 정보
+ 
+    loop chunk size = 10000
+        task->>db: 고객 보험 정보 조회
+        db-->>task: Return 상세 데이터 (dataframe)
+    end
+ 
+    task->>task: 검증 및 전처리
+ 
+    task->>gcs: Upload raw data (csv)
+ 
+    task-->>dag: Return GCS file paths (list)
+ 
+    opt 예외 발생
+        rect rgb(255, 240, 245)
+            task-->>dag: Raise Error
+            dag-->>slack: Alert
+        end
+    end
+```
 ### 2️⃣ CSV 기반 I/O 구조와 Pandas의 한계
 - CSV는 텍스트 기반 포맷으로, 한 컬럼만 사용하더라도 전체 파일을 디스크에서 모두 읽어야 한다.
   - 즉, row-based I/O 구조 특성상 병렬 읽기와 column-level 접근이 어렵다.
@@ -213,6 +248,70 @@ def extract_and_preprocess_example(customer_id_range: tuple, ti: TaskInstance):
         # 생성된 parquet 파일들을 즉시 업로드 후 로컬 정리
         Uploader.upload_many_local_parquet(local_paths, ti=ti, table_name=table_name)
         shutil.rmtree(local_dir, ignore_errors=True)
+```
+
+다음은 최종적으로 데이터를 추출하는 Task를 데이터 규모에 따라 나눈 후의 각각의 시퀀스 다이어그램이다.
+
+#### 1. Small-scale Task
+```mermaid
+sequenceDiagram
+    participant dag as Airflow DAG
+    participant task as Task
+    participant db as DB
+    participant gcs as GCS
+    participant slack as Slack
+
+    dag->>task: Run extract_and_preprocess_small()
+
+    loop 고객 범위 내 chunk size = 20000
+        loop DB에서 조회하는 row batch size = 2000
+            task->>db: 마이데이터 소규모 정보 stream 조회
+            Note over task,db: table1, table2, table3, ...
+            db-->>task: Return 상세 정보 (lazyFrame)
+            task->>task: 전처리 및 검증
+        end
+    end
+
+    task->>gcs: Upload raw data (parquet)
+    task-->>dag: Return GCS file paths (list)
+
+    opt 예외 발생
+        rect rgb(255, 240, 245)
+            task-->>dag: Raise Error
+            dag-->>slack: Alert
+        end
+    end
+```
+
+#### 2. Large-scale Task
+```mermaid
+sequenceDiagram
+    participant dag as Airflow DAG
+    participant task as Task
+    participant db as DB
+    participant gcs as GCS
+    participant slack as Slack
+
+    dag->>task: Run extract_and_preprocess_coverage()
+
+    loop 고객 범위 내 chunk size = 7000
+        loop DB에서 조회하는 row batch size = 2000
+            task->>db: 마이데이터 대규모 정보 stream 조회
+            Note over task,db: table1, table2, table3
+            db-->>task: Return 상세 정보 (lazyFrame)
+            task->>task: 전처리 및 검증
+        end
+    end
+
+    task->>gcs: Upload raw data (parquet)
+    task-->>dag: Return GCS file paths (list)
+
+    opt 예외 발생
+        rect rgb(255, 240, 245)
+            task-->>dag: Raise Error
+            dag-->>slack: Alert
+        end
+    end
 ```
 
 ---

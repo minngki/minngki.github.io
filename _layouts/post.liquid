@@ -68,12 +68,33 @@ layout: default
       </div>
       <hr>
     {% endif %}
-    <div id="markdown-content">
-      {{ content }}
-    </div>
+      <div id="markdown-content">
+          {{ content }}
+      </div>
   </article>
 
-  {% if page.citation %}
+    <!-- ✅ Mermaid 렌더링 스크립트 -->
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+
+      mermaid.initialize({ startOnLoad: true, theme: "default" });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const mermaidBlocks = document.querySelectorAll("pre code.language-mermaid");
+        mermaidBlocks.forEach(block => {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("mermaid");
+          wrapper.innerHTML = block.textContent;
+          block.parentNode.replaceWith(wrapper);
+        });
+        mermaid.init();
+      });
+    </script>
+
+
+    {% if page.citation %}
     {% include citation.liquid %}
   {% endif %}
 
