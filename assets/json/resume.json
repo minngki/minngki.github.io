@@ -55,6 +55,40 @@
   ],
   "projects": [
     {
+      "name": "마케팅 분석용 마이데이터 보장 현황 데이터 추출 자동화",
+      "summary": "Airflow 기반 자동화 파이프라인을 구축하여 최근 N년간 특정 보장 수준 분석 및 통계치 생성",
+      "highlights": [
+        "기간·담보 조건을 Airflow Variable로 설정하여 유연하게 대응 가능한 구조 구현",
+        "미보유 및 평균 이하 보장 유저 그룹 자동 식별하여 후속 CRM 타깃팅에 활용 가능하도록 설계",
+        "ETL 파이프라인 자동화하여 반복 요청 업무를 제거하고 운영 효율성 향상"
+      ],
+      "startDate": "2025-10-01",
+      "skillKeywords": [
+        "Python",
+        "Polars",
+        "Airflow",
+        "GCS",
+        "Slack API"
+      ]
+    },
+    {
+      "name": "금융감독원 2차 대응 — B2C웹 법적 규제 준수",
+      "summary": "마이페이지 내 인증·정보 수정 프로세스 전면 개선",
+      "highlights": [
+        "마이페이지 수정 시 중복 정보 검증 및 수정 이력 로그 저장 기능 구현",
+        "비밀번호 이력 검증을 통해 비밀번호 변경 프로세스 및 인증 안정성 개선",
+        "계정 잠금 로직 개발하여 비밀번호 인증 프로세스 개선"
+      ],
+      "startDate": "2025-10-01",
+      "skillKeywords": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "JPA",
+        "Spring Rest Docs"
+      ]
+    },
+    {
       "name": "마이데이터 보험업권 통계치 추출 자동화 시스템 고도화",
       "summary": "고객사 신규 요청사항에 따른 로직 변경 및 최대 6,000만 건 데이터 처리 성능 고도화",
       "highlights": [
@@ -85,7 +119,10 @@
       "startDate": "2025-08-01",
       "skillKeywords": [
         "Java",
-        "Spring Boot"
+        "Spring Boot",
+        "MySQL",
+        "JPA",
+        "Spring Rest Docs"
       ]
     },
     {
