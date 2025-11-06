@@ -56,7 +56,7 @@
   "projects": [
     {
       "name": "마이데이터 보험업권 통계치 추출 자동화 시스템 고도화",
-      "summary": "고객사 신규 요청사항에 따른 로직 변경 및 최대 4,500만 건 데이터 처리 성능 고도화",
+      "summary": "고객사 신규 요청사항에 따른 로직 변경 및 최대 6,000만 건 데이터 처리 성능 고도화",
       "highlights": [
         "추출 조건 변경으로 인한 데이터 처리 병목을 해결하기 위해 Airflow DAG 구조 전면 재설계",
         "Polars 및 Parquet 도입하여 연산 효율과 I/O 성능 개선, 처리 속도 약 50% 단축",
@@ -159,6 +159,7 @@
       "endDate": "2025-04-01",
       "skillKeywords": [
         "Python",
+        "sqlalchemy",
         "Airflow",
         "GCS",
         "PostgreSQL",
@@ -214,6 +215,7 @@
       "endDate": "2024-12-01",
       "skillKeywords": [
         "Python",
+        "sqlalchemy",
         "GCS",
         "PostgreSQL",
         "Django ORM (transaction.atomic, bulk insert)",
@@ -251,6 +253,7 @@
       "endDate": "2024-03-01",
       "skillKeywords": [
         "TypeScript",
+        "TypeORM",
         "Node.js",
         "Express.js",
         "MongoDB",
