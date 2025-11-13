@@ -83,9 +83,9 @@
       "skillKeywords": [
         "Java",
         "Spring Boot",
-        "MySQL",
         "JPA",
-        "Spring Rest Docs"
+        "Spring Rest Docs",
+        "MySQL"
       ]
     },
     {
@@ -120,9 +120,9 @@
       "skillKeywords": [
         "Java",
         "Spring Boot",
-        "MySQL",
         "JPA",
-        "Spring Rest Docs"
+        "Spring Rest Docs",
+        "MySQL"
       ]
     },
     {
@@ -335,7 +335,7 @@
       "icon": "fa-solid fa-code",
       "keywords": [
         "Python",
-        "Java",
+        "Java 21",
         "TypeScript",
         "JavaScript",
         "Node.js"
@@ -466,12 +466,22 @@
   "interests": [
     {
       "name": "Sports",
-      "icon": "fa-solid fa-tag",
+      "icon": "fa-solid fa-dumbbell",
       "keywords": [
         "Pilates",
         "Golf",
         "Weight Training",
         "Running"
+      ]
+    },
+    {
+      "name": "Reading",
+      "icon": "fa-solid fa-book",
+      "keywords": [
+        "IT Technology",
+        "Philosophy",
+        "Finance & Economics",
+        "Personal Development"
       ]
     }
   ],
