@@ -94,13 +94,6 @@ ninja.data = [{
           window.open("https://instagram.com/justminngki", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://blog.naver.com/miyayong_", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
