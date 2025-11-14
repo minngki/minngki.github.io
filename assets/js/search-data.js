@@ -87,13 +87,6 @@ ninja.data = [{
           window.open("https://github.com/minngki", "_blank");
         },
       },{
-        id: 'social-instagram',
-        title: 'Instagram',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://instagram.com/justminngki", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
