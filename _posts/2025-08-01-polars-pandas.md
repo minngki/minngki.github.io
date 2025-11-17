@@ -12,7 +12,7 @@ Airflow 기반의 데이터 파이프라인을 운영하던 중, 특정 Task가 
 로그에는 단 한 줄의 메시지만 남았다.
 
 ```text
-Killed (-9)
+airflow Task exited with return code -9.
 ```
 
 처음에는 단순한 일시적 장애로 여겼지만, 수차례 재실행 후에도 동일 현상이 발생했다.  
