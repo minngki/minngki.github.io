@@ -30,6 +30,7 @@
       "location": "Seoul, South Korea",
       "url": "http://www.aijinet.com/theme/aijinet/company/company.php",
       "startDate": "2022-02",
+      "endDate": "2026-02",
       "highlights": [
         "Spring Boot 기반 마이데이터 보험업권 관련 API 개발 및 어드민 페이지 개발",
         "Airflow 및 GCP 기반의 병렬 처리·스케줄링 시스템 설계 및 운영 자동화",
@@ -184,8 +185,8 @@
       ]
     },
     {
-      "name": "보험료 기반 추천 데이터 자동화 시스템 구축",
-      "summary": "보험료 기반 추천 점수 생성을 위한 대용량 데이터 ETL 자동화를 Airflow 기반으로 구축",
+      "name": "보험료 기반 추천엔진 메타데이터 자동화 시스템 구축",
+      "summary": "정적 배치로 사전 생성 및 관리하기 위한 엔진 메타데이터 생성 자동화",
       "highlights": [
         "Airflow 도입 및 GCS 연동을 포함한 ETL 파이프라인 자동화 DAG 설계",
         "약 150만 건의 API 요청을 비동기 처리로 구현, 5분 이내 처리 완료하여 생산성 향상",

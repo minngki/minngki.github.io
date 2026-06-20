@@ -9,9 +9,9 @@ profile:
   image: prof-minji.jpg
   image_circular: False # crops the image to make it circular
   more_info: >
-    <p align="right">Backend Developer</p><br>
-    <p>💼 Office: <a href="http://www.aijinet.com/theme/aijinet/company/company.php">Aijinet</a></p><br>
-    <p>📞 Phone: -</p>
+#    <p align="right">Backend Developer</p><br>
+#    <p>💼 Office: <a href="http://www.aijinet.com/theme/aijinet/company/company.php">Aijinet</a></p><br>
+#    <p>📞 Phone: -</p>
     
     
 
